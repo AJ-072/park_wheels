@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "88005311371",
+    "firebase_url": "https://park-wheels-e2bdd-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "park-wheels-e2bdd",
+    "storage_bucket": "park-wheels-e2bdd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88005311371:android:27e81e69bcf6cecbde0d8e",
+        "android_client_info": {
+          "package_name": "in.parkwheels.park_wheels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88005311371-5u9k9b8ogs8modi4hh62gsrsn7u7kr8s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCAB3nmKLSs9yVJiwyvXlpkA8Lezqc8YEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88005311371-5u9k9b8ogs8modi4hh62gsrsn7u7kr8s.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
