@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../../main.dart';
 import '../../service/auth.dart';
-import '../../widgets/loading.dart';
+import '../../widgets/common/loading.dart';
 import '../auth/sign_in.dart';
 
 class Profile extends StatefulWidget {
@@ -36,14 +36,14 @@ class ProfileState extends State<Profile> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                auth.partner?.name ?? '',
+                auth.client?.name ?? '',
                 style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     color: Colors.white70),
               ),
               Text(
-                auth.partner?.email ?? '',
+                auth.client?.email ?? '',
                 style: const TextStyle(fontSize: 16, color: Colors.white70),
               )
             ],
@@ -62,7 +62,7 @@ class ProfileState extends State<Profile> {
               child: Image.asset('assets/icons/profile/profile.png')),
         ),
         Positioned(
-          top: size.height / 2,
+          top: size.height / 2.3,
           bottom: 0,
           width: size.width,
           child: Container(
@@ -75,11 +75,11 @@ class ProfileState extends State<Profile> {
                 info(
                     icon: 'assets/icons/profile/email.png',
                     label: "Email",
-                    value: auth.partner?.email ?? ""),
+                    value: auth.client?.email ?? ""),
                 info(
                     icon: 'assets/icons/profile/phone.png',
                     label: "Phone",
-                    value: "+91 9207409171"),
+                    value: auth.client?.phone??""),
                 // info(icon: 'assets/icons/home/profile.png', label: 'Password',trailing: Icon(Icons.arrow_forward_ios)),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),

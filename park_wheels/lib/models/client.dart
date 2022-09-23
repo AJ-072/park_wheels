@@ -1,44 +1,34 @@
-enum Status{
-  cancelled,
-  paid,
-  parked,
-  expired,
-  completed
-}
+import 'package:firebase_auth/firebase_auth.dart';
 
 class Client {
-  String id;
-  String name;
-  Duration duration;
-  double cost;
-  String slot;
-  DateTime createdAt;
-  DateTime bookedTime;
-  Status status;
-  Client({required this.id,required this.name,required this.slot,required this.cost,required this.duration,required this.createdAt,required this.bookedTime,required this.status});
+  String? _name;
+  String? _email;
+  String? _phone;
+  String? _password;
+  String? _id;
 
-  factory Client.fromMap(Map<String,dynamic> map){
-    return Client(
-        id: map['id'] as String,
-        name : map['name'] as String,
-        slot : map['slot'],
-        cost : map['cost'] as double,
-        duration : map['duration'] as Duration,
-        createdAt : map['created_at'],
-        bookedTime : map['booked_time'],
-        status: map['status']
-    );
+  String get name => _name ?? '';
+  String get email => _email ?? '';
+  String get password => _password ?? '';
+  String get phone => _phone ?? '';
+  String get id => _id ?? "";
+
+  Client(
+      {required String name,
+      required String email,
+      required String phone,
+      String? password,
+      String? id}) {
+    _email = email;
+    _name = name;
+    _password = password;
+    _phone = phone;
+    _id = id;
   }
-
-  Map<String,dynamic> toMap(){
-    return{
-      'id'      : id,
-      'name'    : name,
-      'slot'    : slot,
-      'duration': duration,
-      'cost'    : cost,
-      'created_At': createdAt,
-      'booked_time': bookedTime
-    };
+  Client.map(User user) {
+    _name = user.displayName;
+    _email = user.email;
+    _phone = user.phoneNumber;
+    _id = user.uid;
   }
 }

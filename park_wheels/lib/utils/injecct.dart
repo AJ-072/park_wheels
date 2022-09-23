@@ -1,0 +1,6 @@
+class Inject{
+
+  Inject(){
+
+  }
+}

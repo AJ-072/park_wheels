@@ -7,11 +7,13 @@ class CircularBorderTextField extends StatelessWidget{
   final Widget? prefixIcon;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
-  CircularBorderTextField({this.keyboardType = TextInputType.text,this.label = '',this.prefixIcon,this.validator,this.controller});
+  final bool enabled;
+  CircularBorderTextField({this.enabled=true,this.keyboardType = TextInputType.text,this.label = '',this.prefixIcon,this.validator,this.controller});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      enabled: enabled,
       keyboardType: keyboardType,
       decoration: InputDecoration(labelText: label,helperText: '',border: const OutlineInputBorder(),prefixIcon: prefixIcon),
       validator: validator,

@@ -4,6 +4,10 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+    <string>any text you want</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>any text you want</string>
 	<key>CFBundleDisplayName</key>
 	<string>Park Wheels</string>
 	<key>CFBundleExecutable</key>
